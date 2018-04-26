@@ -527,7 +527,7 @@ def kappa_thermal_speed(T, kappa, particle="e-", method="most_probable"):
     TypeError
         The particle temperature is not a ~astropy.units.Quantity.
 
-    astropy.units.UnitConversionError
+    ~astropy.units.UnitConversionError
         If the particle temperature is not in units of temperature or
         energy per particle.
 
@@ -899,7 +899,7 @@ def plasma_frequency(n, particle='e-', z_mean=None):
         If n_i is not a `~astropy.units.Quantity` or particle is not of
         an appropriate type.
 
-    UnitConversionError
+    ~astropy.units.UnitConversionError
         If `n_i` is not in correct units
 
     ValueError
@@ -1051,7 +1051,7 @@ def Debye_number(T_e, n_e):
     TypeError
         If either argument is not a `~astropy.units.Quantity`
 
-    astropy.units.UnitConversionError
+    ~astropy.units.UnitConversionError
         If either argument is in incorrect units
 
     ValueError
@@ -1182,7 +1182,7 @@ def magnetic_pressure(B):
     TypeError
         If the input is not a `~astropy.units.Quantity`.
 
-    UnitConversionError
+    ~astropy.units.UnitConversionError
         If the input is not in units convertible to tesla.
 
     ValueError

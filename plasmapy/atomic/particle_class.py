@@ -124,27 +124,27 @@ class Particle:
         For when any of the arguments or keywords is not of the required
         type.
 
-    `~plasmapy.utils.InvalidParticleError`
+    `~plasmapy.utils.exceptions.InvalidParticleError`
         Raised when the particle input does not correspond to a valid
         particle or is contradictory.
 
-    `~plasmapy.utils.InvalidElementError`
+    `~plasmapy.utils.exceptions.InvalidElementError`
         For when an attribute is being accessed that requires
         information about an element, but the particle is not an
         element, isotope, or ion.
 
-    `~plasmapy.utils.InvalidIsotopeError`
+    `~plasmapy.utils.exceptions.InvalidIsotopeError`
         For when an attribute is being accessed that requires
         information about an isotope or nuclide, but the particle is not
         an isotope (or an ion of an isotope).
 
-    `~plasmapy.utils.ChargeError`
+    `~plasmapy.utils.exceptions.ChargeError`
         For when either the `~plasmapy.atomic.Particle.charge` or
         `~plasmapy.atomic.Particle.integer_charge` attributes is
         being accessed but the charge information for the particle is
         not available.
 
-    `~plasmapy.utils.AtomicError`
+    `~plasmapy.utils.exceptions.AtomicError`
         Raised for attempts at converting a
         `~plasmapy.atomic.Particle` object to a `bool`.
 

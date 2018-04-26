@@ -180,7 +180,8 @@ class ClassicalTransport:
     ------
     ValueError
         On incorrect or unknown values of arguments.
-    plasmapy.utils.PhysicsError
+
+    ~plasmapy.utils.PhysicsError
         If input or calculated values for Coulomb logarithms are nonphysical.
 
     Examples

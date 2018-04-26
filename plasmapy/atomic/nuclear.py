@@ -102,12 +102,12 @@ def nuclear_reaction_energy(*args, **kwargs):
 
     Raises
     ------
-    `AtomicError`:
+    `~plasmapy.utils.AtomicError`
         If the reaction is not valid, there is insufficient
         information to determine an isotope, the baryon number is
         not conserved, or the charge is not conserved.
 
-    `TypeError`:
+    `TypeError`
         If the positional input for the reaction is not a string, or
         reactants and/or products is not of an appropriate type.
 

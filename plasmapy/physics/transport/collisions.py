@@ -72,15 +72,15 @@ def Coulomb_logarithm(T,
         If the mass or charge of either particle cannot be found, or
         any of the inputs contain incorrect values.
 
-    UnitConversionError
+    ~astropy.units.UnitConversionError
         If the units on any of the inputs are incorrect.
 
         If the n_e, T, or V are not Quantities.
 
-    PhysicsError
+    ~plasmapy.utils.PhysicsError
         If the result is smaller than 1.
 
-    RelativityError
+    ~plasmapy.utils.RelativityError
         If the input velocity is same or greater than the speed
         of light.
 
@@ -295,13 +295,13 @@ def impact_parameter_perp(T,
         If the mass or charge of either particle cannot be found, or
         any of the inputs contain incorrect values.
 
-    UnitConversionError
+    ~astropy.units.UnitConversionError
         If the units on any of the inputs are incorrect
 
     TypeError
         If T, or V are not Quantities.
 
-    RelativityError
+    ~plasmapy.utils.RelativityError
         If the input velocity is same or greater than the speed
         of light.
 
@@ -403,13 +403,13 @@ def impact_parameter(T,
         If the mass or charge of either particle cannot be found, or
         any of the inputs contain incorrect values.
 
-    UnitConversionError
+    ~astropy.units.UnitConversionError
         If the units on any of the inputs are incorrect
 
     TypeError
         If the n_e, T, or V are not Quantities.
 
-    RelativityError
+    ~plasmapy.utils.RelativityError
         If the input velocity is same or greater than the speed
         of light.
 
@@ -597,13 +597,13 @@ def collision_frequency(T,
         If the mass or charge of either particle cannot be found, or
         any of the inputs contain incorrect values.
 
-    UnitConversionError
+    ~astropy.units.UnitConversionError
         If the units on any of the inputs are incorrect
 
     TypeError
         If the n_e, T, or V are not Quantities.
 
-    RelativityError
+    ~plasmapy.utils.RelativityError
         If the input velocity is same or greater than the speed
         of light.
 
@@ -1079,13 +1079,13 @@ def mean_free_path(T,
         If the mass or charge of either particle cannot be found, or
         any of the inputs contain incorrect values.
 
-    UnitConversionError
+    ~astropy.units.UnitConversionError
         If the units on any of the inputs are incorrect
 
     TypeError
         If the n_e, T, or V are not Quantities.
 
-    RelativityError
+    ~plasmapy.utils.RelativityError
         If the input velocity is same or greater than the speed
         of light.
 
@@ -1200,13 +1200,13 @@ def Spitzer_resistivity(T,
         If the mass or charge of either particle cannot be found, or
         any of the inputs contain incorrect values.
 
-    UnitConversionError
+    ~astropy.units.UnitConversionError
         If the units on any of the inputs are incorrect
 
     TypeError
         If the n_e, T, or V are not Quantities.
 
-    RelativityError
+    ~plasmapy.utils.RelativityError
         If the input velocity is same or greater than the speed
         of light.
 
@@ -1328,13 +1328,13 @@ def mobility(T,
         If the mass or charge of either particle cannot be found, or
         any of the inputs contain incorrect values.
 
-    UnitConversionError
+    ~astropy.units.UnitConversionError
         If the units on any of the inputs are incorrect
 
     TypeError
         If the n_e, T, or V are not Quantities.
 
-    RelativityError
+    ~plasmapy.utils.RelativityError
         If the input velocity is same or greater than the speed
         of light.
 
@@ -1456,13 +1456,13 @@ def Knudsen_number(characteristic_length,
         If the mass or charge of either particle cannot be found, or
         any of the inputs contain incorrect values.
 
-    UnitConversionError
+    ~astropy.units.UnitConversionError
         If the units on any of the inputs are incorrect
 
     TypeError
         If the n_e, T, or V are not Quantities.
 
-    RelativityError
+    ~plasmapy.utils.RelativityError
         If the input velocity is same or greater than the speed
         of light.
 
@@ -1574,13 +1574,13 @@ def coupling_parameter(T,
         If the mass or charge of either particle cannot be found, or
         any of the inputs contain incorrect values.
 
-    UnitConversionError
+    ~astropy.units.UnitConversionError
         If the units on any of the inputs are incorrect
 
     TypeError
         If the n_e, T, or V are not Quantities.
 
-    RelativityError
+    ~plasmapy.utils.RelativityError
         If the input velocity is same or greater than the speed
         of light.
 

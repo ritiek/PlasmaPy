@@ -54,7 +54,7 @@ def thermal_speed(double T, particle="e", method="most_probable"):
     TypeError
         The particle temperature is not a Quantity
 
-    UnitConversionError
+    ~astropy.units.UnitConversionError
         If the particle temperature is not in units of temperature or
         energy per particle
 
