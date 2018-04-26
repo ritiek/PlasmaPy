@@ -138,6 +138,10 @@ class Particle:
         information about an isotope or nuclide, but the particle is not
         an isotope (or an ion of an isotope).
 
+    `~plasmapy.utils.exceptions.MissingAtomicDataError`
+        For when an attribute is being accessed that requires
+        information about relevant atomic data, but the data is missing.
+
     `~plasmapy.utils.exceptions.ChargeError`
         For when either the `~plasmapy.atomic.Particle.charge` or
         `~plasmapy.atomic.Particle.integer_charge` attributes is
