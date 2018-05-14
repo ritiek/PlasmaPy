@@ -105,3 +105,7 @@ class Plasma3D(GenericPlasma):
         B = self.magnetic_field
         rho = self.density
         return np.sqrt(np.sum(B * B, axis=0) / (mu0 * rho))
+
+    @classmethod
+    def is_datasource_for(cls, data, header, **kwargs):
+        print(cls, data, header, kwargs)
