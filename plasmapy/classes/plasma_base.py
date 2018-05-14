@@ -5,6 +5,13 @@ from abc import ABC
 PLASMA_CLASSES = OrderedDict()
 
 class GenericPlasmaRegistrar(ABC):
+    """
+    Registration class for `~plasmapy.classes.GenericPlasma`.
+
+    This class checks for the existance of a method named ``is_datasource_for``
+    when a subclass of `GenericMap` is defined. If it exists it will add that
+    class to the registry.
+    """
     _registry = PLASMA_CLASSES
 
     def __init_subclass__(cls, **kwargs):
