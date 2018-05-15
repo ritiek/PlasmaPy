@@ -96,7 +96,6 @@ class BasicRegistrationFactory(object):
         return self._check_registered_widget(*args, **kwargs)
 
     def _check_registered_widget(self, *args, **kwargs):
-        """ Implementation of a basic check to see if arguments match a widget."""
 
         candidate_widget_types = list()
 

@@ -68,8 +68,10 @@ class Plasma3D(GenericPlasma):
         units convertable to length.
 
     """
-    @u.quantity_input(domain_x=u.m, domain_y=u.m, domain_z=u.m)
-    def __init__(self, domain_x, domain_y, domain_z):
+    @u.quantity_input(data=(u.m, u.m, u.m))
+    def __init__(self, data, header, **kwargs):
+        GenericPlasma.__init__(self, data, header, **kwargs)
+
         # Define domain sizes
         self.x = domain_x
         self.y = domain_y
@@ -108,4 +110,4 @@ class Plasma3D(GenericPlasma):
 
     @classmethod
     def is_datasource_for(cls, data, header, **kwargs):
-        print(cls, data, header, kwargs)
+        return True
