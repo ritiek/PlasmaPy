@@ -7,17 +7,28 @@ from plasmapy.classes.plasma_base import (
 class NoDataSource(GenericPlasmaRegistrar):
     pass
 
-class HasDataSource(GenericPlasmaRegistrar):
-    is_datasource_for = 'source'
+class IsDataSource(GenericPlasmaRegistrar):
+    @classmethod
+    def is_datasource_for(cls, **kwargs):
+        return True
+
+class IsNotDataSource(GenericPlasmaRegistrar):
+    @classmethod
+    def is_datasource_for(cls, **kwargs):
+        return False
 
 
 class TestRegistrar:
     def test_no_data_source(self):
-        assert not 'NoDataSource' in PLASMA_CLASSES
+        assert not PLASMA_CLASSES.get(NoDataSource)
 
-    def test_has_data_source(self):
-        assert 'HasDataSource' in PLASMA_CLASSES
-        assert PLASMA_CLASSES['HasDataSource'] == 'source'
+    def test_is_data_source(self):
+        assert PLASMA_CLASSES.get(IsDataSource)
+        assert PLASMA_CLASSES[IsDataSource]()
+
+    def test_is_not_data_source(self):
+        assert PLASMA_CLASSES.get(IsNotDataSource)
+        assert not PLASMA_CLASSES[IsNotDataSource]()
 
 
 def test_subclasses():
