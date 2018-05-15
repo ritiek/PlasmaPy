@@ -113,6 +113,7 @@ class BasicRegistrationFactory(object):
             else:
                 candidate_widget_types = [self.default_widget_type]
         elif n_matches > 1:
+            print(candidate_widget_types)
             raise MultipleMatchError("Too many candidate types identified ({0})."
                                      "Specify enough keywords to guarantee unique type "
                                      "identification.".format(n_matches))

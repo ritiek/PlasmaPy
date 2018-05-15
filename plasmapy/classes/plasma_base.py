@@ -21,5 +21,6 @@ class GenericPlasmaRegistrar(ABC):
 
 
 class GenericPlasma(GenericPlasmaRegistrar):
-    def __init__(self, data, header, **kwargs):
-        super(GenericPlasma, self).__init__(self, data, header, **kwargs)
+    def __init__(self, **kwargs):
+        for key, value in kwargs.items():
+            setattr(self, key, value)
