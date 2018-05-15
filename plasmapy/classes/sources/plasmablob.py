@@ -161,3 +161,8 @@ class PlasmaBlob(GenericPlasma):
         """
         theta = quantum_theta(self.T_e, self.n_e)
         return theta
+
+    @classmethod
+    def is_datasource_for(cls, **kwargs):
+        match = kwargs.get('T_e') and kwargs.get('n_e')
+        return match

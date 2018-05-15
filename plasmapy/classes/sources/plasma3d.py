@@ -68,9 +68,9 @@ class Plasma3D(GenericPlasma):
         units convertable to length.
 
     """
-    @u.quantity_input(data=(u.m, u.m, u.m))
-    def __init__(self, data, header, **kwargs):
-        GenericPlasma.__init__(self, data, header, **kwargs)
+    @u.quantity_input(domain_x=u.m, domain_y=u.m, domain_z=u.m)
+    def __init__(self, domain_x, domain_y, domain_z):
+        #GenericPlasma.__init__(self, data, header, **kwargs)
 
         # Define domain sizes
         self.x = domain_x
@@ -109,5 +109,8 @@ class Plasma3D(GenericPlasma):
         return np.sqrt(np.sum(B * B, axis=0) / (mu0 * rho))
 
     @classmethod
-    def is_datasource_for(cls, data, header, **kwargs):
-        return True
+    def is_datasource_for(cls, **kwargs):
+        match = kwargs.get('domain_x') and \
+                kwargs.get('domain_y') and \
+                kwargs.get('domain_z')
+        return match
