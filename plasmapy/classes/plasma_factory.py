@@ -7,7 +7,12 @@ from plasmapy.utils.datatype_factory_base import ValidationFunctionError
 
 
 class PlasmaFactory(BasicRegistrationFactory):
+    """
+    Plasma factory class. Used to create a variety of Map objects. Valid plasma
+    structures are specified by registering them with the factory.
+    """
     pass
+
 
 Plasma = PlasmaFactory(default_widget_type=GenericPlasma,
                        additional_validation_functions=['is_datasource_for'])
