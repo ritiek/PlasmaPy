@@ -340,7 +340,7 @@ def swept_probe_analysis(probe_characteristic, probe_area, gas,
     n_e = get_electron_density_LM(I_es, reduce_bimaxwellian_temperature(T_e,
                                   hot_fraction), probe_area)
 
-    if visualize:  # coveralls: ignore
+    if visualize:  # pragma: no cover
         with quantity_support():
             fig, (ax1, ax2) = plt.subplots(2, 1)
             ax1.plot(probe_characteristic.bias,
