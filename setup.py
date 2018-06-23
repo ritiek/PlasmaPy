@@ -86,6 +86,16 @@ if not RELEASE:
 # modify distutils' behavior.
 cmdclassd = register_commands(PACKAGENAME, VERSION, RELEASE)
 
+try:
+    from plasmapy.tests.setup_command import PlasmaPyTest
+    # Overwrite the Astropy Testing framework
+    cmdclassd['test'] = type('PlasmaPyTest', (PlasmaPyTest,),
+                            {'package_name': 'plasmapy'})
+
+except Exception:
+    # Catch everything, if it doesn't work, we still want PlasmaPy to install.
+    pass
+
 # Freeze build information in version.py
 generate_version_py(PACKAGENAME, VERSION, RELEASE,
                     get_debug_option(PACKAGENAME))
